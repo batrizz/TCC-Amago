@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ÂMAGO - Cadastro ONG</title>
+	<link rel="shortcut icon" href="imagens/logo.png" type="image/x-png">
+	<link rel="stylesheet" href="estilo_ong_cadastro.css">
+</head>
+<body>
+
+	<div class="container">
+<!-- --------------------------------------CONTEÚDO DO CONTAINER----------------------------------------- -->
+<!-- --------------------------------------		CADASTRO ONG	----------------------------------------- -->
+		<div class="content first-content"> <!-- Primeira coluna -->
+			<div class="first-colum">
+			<div class="btn-voltar"><a class="btn-back" href="index.ejs">Voltar</a></div>
+			<h2 class="title-login">ONG</h2>
+			<p class="description-login">Já possui uma conta? Faça seu Login.</p>
+			<a href = "login_ong.ejs" class="btn-login">ENTRAR</a>
+			</div>
+
+			<div class="second-colum"> <!-- Segunda coluna -->
+			<img src="imagens/logo_completa_MENOR.png">
+			<h2 class="title-cadastro">Crie sua conta - ONG</h2>
+			<p class="description-cadastro">Junte-se conosco.</p>
+			<% if(locals.mensagem){ %>
+			  <p style="color:red"><%= mensagem %> </p>
+			<%  } %>
+			<form class="form" action="/cadastro_ong" method="POST">
+				<input type="text" placeholder="Nome" maxlength="60" name="nome" required>
+				<input type="text" placeholder="Usuário" maxlength="20" name="usuario" required>
+				<input type="email" placeholder="E-mail" maxlength="100" name="email" required>
+				<input type="password" placeholder="Senha" maxlength="20"  name="senha" required>
+				<input type="text" placeholder="CNPJ" maxlength="10" name="cnpj" required>
+				<input type="text" placeholder="CEP" maxlength="9" name="cep" required>
+				<input type="text" placeholder="Estado" maxlength="60" name="estado" required>
+				<input type="text" placeholder="Cidade" maxlength="60" name="cidade" required>
+				<input type="text" placeholder="Bairro" maxlength="60" name="bairro" required>
+				<input type="text" placeholder="Rua" maxlength="60" name="rua" required>
+				<input type="text" placeholder="Número"  maxlength="5"name="numero" required>
+
+				<input type="submit" class="btn-cadastro" value="Enviar">
+
+			</form>
+
+			</div>
+		</div>
+
+</body>
+</html>

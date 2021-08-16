@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ÂMAGO - Login Cliente</title>
+	<link rel="shortcut icon" href="imagens/logo_pequena.png" type="image/x-png">
+	<link rel="stylesheet" href="estilo_cliente_login.css">
+</head>
+<body>
+	<div class="container">
+<!-- --------------------------------------CONTEÚDO DO CONTAINER----------------------------------------- -->
+<!-- --------------------------------------		LOGIN CLIENTE	----------------------------------------- -->
+		<div class="content first-content"> <!-- Primeira coluna -->
+			<div class="first-colum">
+				<div class="btn-voltar"><a class="btn-back" href="index.ejs">Voltar</a></div>
+			<h2 class="title-login">Faça seu cadastro - CLIENTE</h2>
+			<p class="description-login">Ainda não se cadastrou? Para uma melhor navegação, junte-se conosco! :)</p>
+			<a class="btn-login" href="cadastro_cliente.ejs" role="button">Cadastre-se</a>
+
+			</div>
+
+			<div class="second-colum"> <!-- Segunda coluna -->
+			<img src="imagens/logo_completa_MENOR.png">
+			<h2 class="title-cadastro">Login - CLIENTE</h2>
+			<p class="description-cadastro">Faça seu Login.</p>
+			<% if(locals.mensagem){ %>
+			  <p style="color:red"><%= mensagem %> </p>
+			<%  } %>
+			<form class="form" action="loginCliente" method="POST">
+				<input type="text" placeholder="Usuário" name="usuario" required>
+				<input type="password" placeholder="Senha" name="senha" required>
+				<input type="submit" class="btn-cadastro" placeholder="ENTRAR" required>
+			</form>
+
+			</div>
+		</div>
+</body>
+</html>

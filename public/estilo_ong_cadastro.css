@@ -1,0 +1,157 @@
+/*-----------------------------------------PÁGINA - CADASTRO DA ONG---------------------------------------------------------------------------*/
+/*-----------------------------------------------RESET INICIAL---------------------------------------------------------------------------*/
+*
+{margin: 0; padding: 0; box-sizing: border-box; font-family: century gothic; 	outline-style: none;
+}
+
+a{text-decoration: none;}
+
+/*-----------------------------------------------CONTAINER COM O CONTEÚDO---------------------------------------------------------------------------*/
+.container
+{display: flex;
+justify-content: center;
+align-items: center;
+height: 150vh;
+background-color: #c4c4c4;}
+
+/*-----------------------------------------------FUNDO ROXO DA PRIMEIRA COLUNA---------------------------------------------------------------------------*/
+.content
+{border-radius: 15px;
+background-color: #fff;
+width: 70%;
+height: 100%;
+justify-content: space-between;
+align-items: center;
+position: relative;}
+
+.content::before
+{content: "";
+position: absolute;
+background-color: #a300db;
+width: 40%;
+height: 100%;
+border-top-left-radius: 15px ;
+border-bottom-left-radius: 15px ;}
+
+/*-----------------------------------------------PRIMEIRA COLUNA---------------------------------------------------------------------------*/
+.first-content
+{display: flex;}
+
+.first-colum
+{margin-left: 5%;
+text-align: center;
+flex: 1 0  auto;
+z-index: 2;}
+
+.title-login
+{color: #FFF;
+font-size: 28px;
+font-weight: bold;
+text-transform: capitalize;}
+
+.description-login
+{font-size: 14px;
+font-weight: 300;
+color: #FFF;
+line-height: 60px;}
+
+.btn-login
+{border-radius: 15px;
+border: 1px solid white;
+color: #fff;
+background-color: transparent;
+font-size: 15px;
+padding: 10px 50px;
+cursor: pointer;}
+
+.btn-login:hover
+{background-color: #fff;
+border: 1px solid white;
+color: #a300db;
+font-weight: bold;}
+
+/*-----------------------------------------------SEGUNDA COLUNA---------------------------------------------------------------------------*/
+
+img{
+width: 30%;
+height: 15%;
+margin-top: -8%;
+margin-bottom: 5%;
+}
+
+.second-colum
+{flex: 2 0 auto;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;}
+
+.title-cadastro
+{color: #a300db;
+font-size: 28px;
+font-weight: bold;
+text-transform: capitalize;}
+
+.description-cadastro
+{font-size: 14px;
+font-weight: 300;
+color: #858585;
+line-height: 30px;}
+
+.form
+{display: flex;
+flex-direction: column;
+width: 55%;}
+
+.form input[type=text]
+{height: 45px;
+border: none;
+background-color: #ecf0f1;
+border-radius: 15px;
+margin: 8px;
+text-align: center;}
+
+.form input[type=password]
+{height: 45px;
+border: none;
+background-color: #ecf0f1;
+border-radius: 15px;
+margin: 8px;
+text-align: center;}
+
+.form input[type=email]
+{height: 45px;
+border: none;
+background-color: #ecf0f1;
+border-radius: 15px;
+margin: 8px;
+text-align: center;}
+
+.btn-cadastro
+{border-radius: 15px;
+border: 1px solid #a300db;
+color: #a300db;
+background-color: transparent;
+font-size: 15px;
+padding: 10px 50px;
+cursor: pointer;}
+
+.btn-cadastro:hover
+{background-color: #a300db;
+border: 1px solid #a300db;
+color: #fff;
+font-weight: bold;}
+
+.btn-voltar
+{
+padding-bottom: 10%;
+}
+
+.btn-back
+{text-decoration: none;
+color: #fff;
+border-bottom: 1px solid white;}
+
+
+
+

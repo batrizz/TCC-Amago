@@ -1,0 +1,221 @@
+*
+{
+margin:0;
+padding:0;
+}
+html{
+	scroll-behavior: smooth;
+}
+body
+{
+    margin: 0px;
+	font-family:sans-serif;
+}
+
+#nav-bar
+{
+	position: sticky;
+	top:0;
+	z-index:10;
+}
+.navbar
+{
+	background-color:white;
+	padding:0 !important;
+}
+.navbar-brand img
+{
+	height: 60px;
+	padding-left:30px;
+}
+.navbar-nav li
+{
+	padding:0 10px;
+}
+.navbar-nav li a
+{
+	color: black !important;
+	float: right;
+	text-align: left;
+}
+
+.fa-bars
+{
+	color:black;
+	font-size:30px !important;
+}
+.navbar-toggler
+{
+	outline: none !important;
+}
+#banner
+{
+	background-image:linear-gradient(to right, #5e1669, #a62aaa);
+	color:#fff;
+	padding-top:5%;
+	padding-bottom: 0.1%;
+}
+.promo-title
+{
+	font-size:40px;
+	font-weight:600;
+	margin-top:100px;
+}
+
+#projetos-sociais{
+	background-color: #ffffff;
+	/*border-left: 1px solid #a517ba;
+	border-right: 1px solid #a517ba;*/
+	width: 95%;
+	margin-left: 2.5%;
+	padding-bottom: 10%;
+}
+
+/*----------------------------------------------CONTEÚDO-------------------------------------------------------*/
+.titulo{
+	font-weight: 600;
+	margin-left: 1%;
+    width: 99%;
+    height: 15%;
+    padding-top: 3%;
+    text-align: center;
+	font-size: 1.8em;
+	color: #a517ba;
+}
+.nome-do-projeto p{
+	border-left: 1px #c3c2c4 solid;
+	border-top: 1px #c3c2c4 solid;
+	border-right: 1px #c3c2c4 solid;
+	border-radius: 15px 15px 0px 0px;
+	text-align: center;
+	padding-top: 2%;
+	margin-top: 3%;
+	margin-left: 5%;
+    width: 90%;
+	font-size: 1.4em;
+	background-color:#ffffff;
+	padding-bottom: 1%;
+}
+
+.nome-da-ong p{
+	border-left: 1px #c3c2c4 solid;
+	border-right: 1px #c3c2c4 solid;
+	margin-top: -1.4%;;
+	text-align: center;
+	padding-bottom: 1%;
+	margin-left: 5%;
+	width: 90%;
+	font-size: 1.2em;
+	background-color:#ffffff;
+}
+.descricao{
+	margin-top: -1.6%;
+	color: #000;
+	margin-left: 5%;
+	width: 90%;
+	text-align: justify;
+	padding-top: 1%;
+	padding-left: 2%;
+	padding-right: 2%;
+	background-color:#ffffff;
+	border-left: 1px #c3c2c4 solid;
+	border-right: 1px #c3c2c4 solid;
+}
+.titulo-mais-info{
+	border-left: 1px #c3c2c4 solid;
+	border-right: 1px #c3c2c4 solid;
+	text-align: center;
+	background-color:#ffffff;
+	margin-left: 5%;
+    width: 90%;
+    font-size: 1.2em;
+}
+
+.mais-informacoes ul{
+	border-left: 1px #c3c2c4 solid;
+	border-right: 1px #c3c2c4 solid;
+	margin-bottom: 7%;
+	text-align: center;
+	width: 90%;
+	padding-bottom:10px;
+	margin-left: 5%;
+	border-radius: 0px 0px 15px 15px;
+	background-color: #a517ba;;
+	list-style: none;
+}
+
+.mais-informacoes ul li {
+	display: inline;
+	text-align: center;
+	padding-left: 40px;
+	padding-right: 40px;
+	color: #fff;
+	text-decoration: none;
+}
+.mais-informacoes ul li p{
+	display: inline-block
+ }
+/*-------------------------------------------------- RODAPÉ -------------------------------*/
+
+.img-rodape{
+	width: 100%;
+	height: 10%;
+}
+
+.img-rodape img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+#container-rodape
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#card-rodape{
+	width: 450px;
+	margin: 0 20px;
+	border: 0px;
+}
+#card-rodape .top-text{
+	padding: 5px;
+	text-align: center;
+}
+#card-rodape .top-text .name{
+	font-size: 25px;
+	font-family: century gothic;
+	font-weight: 600;
+
+}
+#card-rodape .lista-rodape ul{
+	font-size: 20px;
+	font-weight: 400;
+	text-decoration: none;
+	list-style: none;
+}
+.redes-sociais{
+	display: flex;
+}
+.redes-sociais a{
+	text-decoration: none;
+}
+.redes-sociais img{
+	height: 100%;
+	width: 22%;
+	margin-left: 6%;
+	margin-top: 20%;
+}
+.direitos{
+	padding: 1.5%;
+	height: 10%;
+	width: 100%;
+	background-color: #3a3a3a;
+	text-align: center;
+}
+.direitos p{
+	color: rgb(99, 99, 99);
+	font-size: 25px;
+	font-weight: 500;
+}
+ 

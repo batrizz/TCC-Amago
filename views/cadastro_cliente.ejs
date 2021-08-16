@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ÂMAGO - Cadastro cliente</title>
+	<link rel="shortcut icon" href="imagens/logo.png" type="image/x-png">
+	<link rel="stylesheet" href="estilo_cliente_cadastro.css">
+</head>
+<body>
+
+	<div class="container">
+<!-- --------------------------------------CONTEÚDO DO CONTAINER----------------------------------------- -->
+<!-- --------------------------------------		CADASTRO CLIENTE	----------------------------------------- -->
+		<div class="content first-content"> <!-- Primeira coluna -->
+			<div class="first-colum">
+			<div class="btn-voltar"><a class="btn-back" href="index.ejs">Voltar</a></div>
+			<h2 class="title-login">CLIENTE</h2>
+			<p class="description-login">Já possui uma conta? Faça seu Login.</p>
+			<a href = "login_cliente.ejs" class="btn-login" >ENTRAR</a>
+			</div>
+
+			<div class="second-colum"> <!-- Segunda coluna -->
+			<img src="imagens/logo_completa_MENOR.png">
+			<h2 class="title-cadastro">Crie sua conta - CLIENTE</h2>
+			<p class="description-cadastro">Para uma melhor navegação, junte-se conosco.</p>
+			<% if(locals.mensagem){ %>
+			  <p style="color:red"><%= mensagem %> </p>
+			<%  } %>
+			<form class="form" action="/cadastro_cliente" method="POST">
+				<input type="text" placeholder="Nome" maxlength="60" name="nome" required>
+				<input type="text" placeholder="Usuário" maxlength="20" name="usuario" required>
+				<input type="date" placeholder="Data de Nascimento" maxlength="10" name="nascimento" required>
+				<input type="password" placeholder="Senha" maxlength="20" name="senha" required>
+				
+				<input type="submit" class="btn-cadastro" value="Enviar" require"">
+			</form>
+
+			</div>
+		</div>
+
+
+
+
+</body>
+</html>

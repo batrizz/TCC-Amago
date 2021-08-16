@@ -1,0 +1,243 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" href="imagens/logo_pequena.png" type="image/x-png">
+		<title>ÂMAGO - Projetos Sociais</title>
+		<link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="estilo_projetos_sociais.css">
+	</head>
+<body>
+
+	<!-----------------------------------------------------------------------------TOPO --------------------------------------------------------------->
+
+<section id="nav-bar">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<a class="navbar-brand" href="#"><img src="imagens/logo_completa.png"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	<i class="fa fa-bars" aria-hidden="true"></i>
+	</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav ml-auto">
+		  <li class="nav-item">
+			<a class="nav-link" href="index_ong.ejs">HOME</a>
+		  </li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#">PRODUTOS</a>
+				</li>
+
+				<li class="nav-item">
+			<a class="nav-link" href="#sobre">SOBRE</a>
+		  </li>
+
+		  <li class="nav-item">
+			<a class="nav-link" href="#">PROJETOS SOCIAIS</a>
+		  </li>
+		  <li class="nav-item">
+			<a href="perfil_ong.ejs" style="color:black;"><i class="fa fa-user-o" aria-hidden="true" style="font-size:1.3em; padding-top:10px;padding-right:10px;"></i></a>
+		  </li>
+		  
+		  <li class="nav-item">
+		  <a href="/logout" style="color:black;"><i class="fa fa-sign-out" aria-hidden="true" style="font-size:1.3em;padding-top:10px; padding-right:20px;"></i></a>
+		  </li>
+			</ul>
+	  </div>
+	</nav>
+</section>
+<!----------------------------------------------- BANNER------------------------------------------------>
+<section id="banner">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-6">
+		<p class="promo-title">Projetos Sociais</p>
+		<p>Conheça os Projetos Sociais, identifique-se e faça parte, gerando um mundo mais solidário!</p>
+
+	</div>
+	<div class="col-md-6 text-center">
+		<img src="imagens/happy-bunch.png" class="img-fluid"/>
+	</div>
+	</div>
+	</div>
+	</section>
+<section id="projetos-sociais">
+<div class="titulo"><p>Todos os projetos...</p></div>
+
+
+
+<!------------------------------------------CONTEÚDO---------------------------------------->
+	<% for(var i =0;i<resultado.length;i++){%>
+	<% var id=resultado[i].id %>
+	<div class="projeto-completo">
+	<div class="nome-do-projeto">
+		<p><b>Projeto:</b> <%=resultado[i].nome%></p>
+	</div>
+	<div class="nome-da-ong">
+		<p><b>ONG responsável pelo projeto:</b> <%=resultado[i].ong%></p>
+	</div>
+	<div class="descricao">
+		<%=resultado[i].descricao%></br></br>
+	</div>
+
+	<div class="titulo-mais-info">
+		<p><b>Informações para contato</b></p><br>
+	</div>
+
+	<div class="mais-informacoes">
+		<ul>
+			<br>
+		<li><p>Estado: <%=resultado[i].estado%></p></li>
+		<li><p>Cidade: <%=resultado[i].cidade%></p></li>
+		<li><p>Bairro: <%=resultado[i].bairro%></p></li>
+		<li><p>E-mail: <%=resultado[i].email%></p></li>
+		<li><p>Telefone: <%=resultado[i].telefone%></p></li>
+	</ul>
+	<%    } %>
+
+	</div>
+	</div>
+</section>
+<!------------------------------------------ rodapé ------------------------------------------------>
+<section id="rodape">
+	<img src="imagens/rodape.png" style="margin-top:-6%;width:100%">
+	<div class="container" id="container-rodape"style="height:50%;margin-top:-25%;">
+		<div class="card" id="card-rodape" style="background-color:#68176D;margin-left:-13%;">
+			<div class="top-text">
+				<div class="name" style="color:white;">Início</div>
+				<div class="lista-rodape">
+					<ul>
+						<li><a href="#">Página Inicial</a></li>
+						<li><a href="#">Desenvolvedores</a></li>
+						<li><a href="#">Cadastre-se</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="card" id="card-rodape"style="background-color:#68176D;">
+			<div class="top-text">
+				<div class="name"style="color:white;">Sobre nós</div>
+				<div class="lista-rodape">
+				<ul>
+					<li><a href="#">Sobre o Âmago</a></li>
+					<li><a href="#">Página de Produtos</a></li>
+					<li><a href="#">Projetos sociais</a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+		<div class="card" id="card-rodape" style="background-color:#68176D;left:200px">
+			<div class="top-text">
+				<div class="name"style="color:white;">Suporte</div>
+				<div class="lista-rodape">
+					<ul>
+						<li><a href=# data-toggle="modal" data-target="#staticBackdrop">
+						    Termos de uso
+						</a></li>
+
+						<li><a href="#rodape" data-toggle="popover" title="E-mail" data-content="Entre em contato através do e-mail: amago.tcc@gmail">Contato</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="card" id="card-rodape"style="background-color:#68176D;left:100px;">
+			<div class="top-text">
+
+				<div class="lista-rodape">
+					<div class="redes-sociais">
+						<a href="https://www.facebook.com"><img src="imagens/face_icon.png"></a>
+						<a href="https://www.instagram.com"><img src="imagens/insta_icon.png"></a>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<!--------------------------------------------------modal---------------------------------------------------->
+<!-- Modal dos termos -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel">TERMOS DE USO </h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+					<b>1. ACEITAÇÃO<br></b>
+					Bem-vindo ao site Âmago. <b>O PRESENTE DOCUMENTO
+					ESTABELECE OS TERMOS E CONDIÇÕES APLICÁVEIS AO USO DO
+					SITE. POR FAVOR, REVIDE OS TERMO DE USO CUIDADOSAMENTE
+					ANTES DE UTILIZAR O SITE. AO ACESSAR OU UTILIZAR O SITE, TODOS
+					OS USUÁRIOS E VISITANTES DECLARAM ACEITAR OS TERMOS E
+					CONDIÇÕES CONTIDOS NESTES TERMOS DE USO. CASO VOCÊ NÃO
+					CONCORDE COM OS TERMOS E CONDIÇÕES CONTIDO NESTES
+					TERMOS, POR GENTILEZA, NÃO SE CADASTRE NO SITE.</b><br><br><br>
+
+					<b>2. DO SERVIÇO<br></b>
+					A plataforma Âmago é caracterizada como um site de comprar e
+					venda, atuando como um mediador entre usuários (clientes), que buscam
+					realizar compras de produtos e, ainda mais, ter acesso a informação de
+					localização e projetos de Organizações Não Governamentais.
+					O site Âmago atua como um mediador entre os usuários do tipo
+					cliente e usuários do tipo ONG, nesse sentido, nós não nos
+					responsabilizamos pelo pagamento dos produtos ou pelo cancelamento do
+					pedido. Após a realização da compra de algum produto, está vetado o
+					cancelamento de tal compra.<br><br><br>
+
+					<b>2.1 PARA USUÁRIOS DO TIPO ONG<br></b>
+					É de inteira responsabilidade do usuário do tipo ONG, cadastrar seus
+					produtos para a venda na plataforma. Os produtos devem ser oriundos da
+					própria instituição.<br><br>
+
+					<b>2.1.2</b> Não é permitido a venda de produtos que possuam cunho
+					impróprio, como:
+					I. Objetos sexuais;
+					II. Substâncias químicas ilegais;
+					III. Componentes de alto valor (como casas, carros ou algo do tipo).<br><br>
+
+					<b>2.1.3</b> Após o cadastro de algum produto, haverá um prazo de até sete
+					(7) diais úteis, para que esse produto esteja disponível na loja. O mesmo
+					ocorrerá, caso alguma informação do produto seja atualizada.
+					2.1.4 Ao se cadastrar na plataforma, no ícone “dinheiro”, encontrado no
+					menu principal (superior, direito), o usuário ONG deverá cadastrar suas
+					informações de pagamento. Tais informações serão utilizadas para a venda
+					do produto cadastrado. A plataforma não compartilhará esses dados.<br><br>
+					<b>2.1.5</b> O usuário do tipo cliente, terá que se cadastrar para ter acesso a
+					página da loja, onde será encontrado os produtos e as questões de
+					pagamento para finalização da compra.<br><br>
+					<b>2.1.6</b> É recomendado que o usuário do tipo cliente tenha mais que 16
+					anos, pois a plataforma não se responsabiliza pelas compras efetivadas
+					por engano, portanto, é importante que o usuário saiba realizar todos os
+					procedimentos.<br><br>
+					<b>2.1.7</b> O sistema web Âmago, não se responsabiliza pelas compras
+					não entregues, caso ocorra este empecilho, comunicar a ONG que remeteu
+					o produto, com os contatos disponíveis no site, na aba “Projetos sociais”.<br><br><br>
+
+					<b>3. DA POLÍTICA DE PRIVACIDADE E SEGURANÇA<br></b>
+					O site Âmago possui uma política que visa proteger seus usuários
+					contra o uso indevido de suas informações pessoais por terceiros.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+	$('.carousel').carousel();
+	$('[data-toggle="popover"]').popover();
+</script>
+</body>
+</html>
